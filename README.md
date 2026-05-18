@@ -1,5 +1,10 @@
-# Joomla Development - Ipsis Litteris Standards
+---
+name: Joomla Development (Ipsis Litteris)
+description: High-fidelity toolset for modern Joomla 5/6 architecture, derived directly from core components.
+version: 3.0.0
+---
 
+# Joomla Development - Ipsis Litteris Standards
 
 This skill provides a high-fidelity toolset for scaffolding and developing Joomla 5 and 6 projects. It enforces the exact architectural patterns found in core components like `com_banners` and `com_content`.
 
@@ -10,6 +15,7 @@ This skill provides a high-fidelity toolset for scaffolding and developing Jooml
 - **Parametric Translations via `sprintf`**: Do not concatenate variables inside hardcoded HTML elements (e.g., `<strong>ID:</strong> <?php echo $this->item->id; ?>`). Define a translation key containing formatters like `%s` or `%d` (e.g., `COM_ICODE_TESTES_ID_FORMAT="<strong>ID:</strong> %s"`) and display it using `sprintf(Text::_('CONSTANT'), $value)` to maintain perfectly localized and cleanly formatted structures.
 - **Strictly No Emojis - Always FontAwesome (MANDATORY)**: Never use standard emojis (💻, 🔍, 🛡️, 🤝, ✔, ✖, ⌛) for interface badges, icons, or headers. Always use equivalent FontAwesome icons (e.g., `fa-laptop-code`, `fa-search`, `fa-shield-alt`, `fa-handshake`, `fa-check`, `fa-times`, `fa-hourglass-half`) to keep a cohesive, high-quality, professional corporate aesthetic.
 - **Styles Must Be Kept in Media (MANDATORY)**: Styles should never be embedded inline or inside template views. They must always reside inside specialized assets located in `/media/` (e.g., `/media/com_icode/css/frontend.css`) and loaded using Joomla's Web Asset Manager (`$wa->useStyle()`).
+- **Portuguese Git Commits (MANDATORY)**: Always write and format Git commit messages in **Portuguese (pt-BR)** unless explicitly requested otherwise. This ensures clean, uniform, and localized history tracking across the repository.
 - **Global Storage Patterns**: 
   - **Languages**: Store language files in the common Joomla folders (`/language/` with `pt-BR/` and `en-GB/` subfolders).
   - **Media**: All assets (CSS, JS, Images, Vendors) must be placed in the common `/media/` directory (e.g., `/media/mod_my_module/`).
